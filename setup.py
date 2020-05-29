@@ -18,6 +18,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/bra-fsn/hashable_df",
     packages=setuptools.find_packages(),
+    install_requires=['autohash', 'numpy'],
     classifiers=[
         "Programming Language :: Python",
         "License :: OSI Approved :: MIT License",
