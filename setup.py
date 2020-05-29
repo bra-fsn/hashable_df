@@ -5,7 +5,7 @@ import setuptools
 with io.open("README.md", "rt", encoding="utf8") as f:
     long_description = f.read()
 
-with io.open("autohash/__init__.py", "rt", encoding="utf8") as f:
+with io.open("hashable_df/__init__.py", "rt", encoding="utf8") as f:
     version = re.search(r"__version__ = \'(.*?)\'", f.read()).group(1)
 
 setuptools.setup(
