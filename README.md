@@ -27,5 +27,5 @@ hashable_df(df)['E'].unique()
 
 returning
 ```
-hashable_df(df)['E'].unique()
+array([[{1: {2: 2}}, {2: {3: 3}}]], dtype=object)
 ```
