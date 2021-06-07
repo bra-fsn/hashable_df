@@ -16,4 +16,9 @@ def hashable_df(df):
     return df.applymap(f)
 
 
-__version__ = '0.0.5'
+def hashable_series(ser):
+    """Return a Series with hashable values."""
+    return ser.map(f)
+
+
+__version__ = '0.0.6'
