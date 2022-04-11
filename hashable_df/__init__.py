@@ -13,7 +13,10 @@ def f(value):
 
 def hashable_df(df):
     """Return a DataFrame with hashable cell values."""
-    return df.applymap(f)
+    # applymap might change types. Try to restore the original.
+    orig_types = df.dtypes
+    df = df.applymap(f).astype(orig_types, errors="ignore")
+    return df
 
 
 def hashable_series(ser):
@@ -21,4 +24,4 @@ def hashable_series(ser):
     return ser.map(f)
 
 
-__version__ = '0.0.6'
+__version__ = '0.0.7'
