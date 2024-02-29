@@ -15,7 +15,8 @@ def hashable_df(df):
     """Return a DataFrame with hashable cell values."""
     # map might change types. Try to restore the original.
     orig_types = df.dtypes
-    df = df.map(f).astype(orig_types, errors="ignore")
+    # Use map on Pandas >= 2.1.0 and applymap below it
+    df = getattr(df, "map", df.applymap)(f).astype(orig_types, errors="ignore")
     return df
 
 
