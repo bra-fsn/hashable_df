@@ -1,0 +1,24 @@
+[project]
+name = "hashable_df"
+description = "Makes unhashable values in a pandas DataFrame hashable"
+readme = "README.md"
+authors = [
+    {name = "NAGY, Attila", email = "nagy.attila@gmail.com" }
+]
+dependencies = [
+    "autohash",
+    "numpy",
+]
+dynamic = ["version"]
+classifiers=[
+    "Programming Language :: Python",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/bra-fsn/hashable_df"
+"Source" = "https://github.com/bra-fsn/hashable_df"
+
+[tool.setuptools.dynamic]
+version = {attr = "hashable_df.__version__"}
