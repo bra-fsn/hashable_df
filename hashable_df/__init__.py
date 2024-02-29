@@ -13,9 +13,9 @@ def f(value):
 
 def hashable_df(df):
     """Return a DataFrame with hashable cell values."""
-    # applymap might change types. Try to restore the original.
+    # map might change types. Try to restore the original.
     orig_types = df.dtypes
-    df = df.applymap(f).astype(orig_types, errors="ignore")
+    df = df.map(f).astype(orig_types, errors="ignore")
     return df
 
 
